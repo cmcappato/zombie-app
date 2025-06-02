@@ -17,8 +17,6 @@ ENV/
 .vscode/
 .idea/
 
-# Streamlit cache
-.streamlit/
 
 # Logs and system files
 *.log
