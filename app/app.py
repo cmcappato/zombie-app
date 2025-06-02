@@ -3,20 +3,22 @@ import pandas as pd
 import joblib
 from styles import get_custom_css
 
+st.set_page_config(
+    page_title="Supervivencia Zombie",
+    page_icon="🧟"
+)
 # Cargar modelo
 modelo = joblib.load("model/modelo_zombie.pkl")
-
-# Archivo con estilos
-st.markdown(get_custom_css(), unsafe_allow_html=True)
 
 # Cargar datos para obtener columnas de referencia
 df = pd.read_csv("data/zombie_data_binary.csv", low_memory=False)
 X = df.drop(columns=["fecha_zombificacion", "grupo_supervivencia", "sobreviviente"])
-
 columnas_entrenamiento = joblib.load("model/columnas_entrenamiento.pkl")
 X_dummies = pd.get_dummies(X).reindex(columns=columnas_entrenamiento, fill_value=0)
 
-st.title("🧟‍♀️ Clasificador de Supervivencia Zombie")
+# Archivo con estilos
+st.markdown(get_custom_css(), unsafe_allow_html=True)
+st.title("🧟‍♀️ ¿Sobrevivirías a un ataque de zombies?")
 
 with st.form("formulario_prediccion"):
     edad = st.number_input("Edad", min_value=0, max_value=121, step=1)
