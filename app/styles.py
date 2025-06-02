@@ -8,7 +8,7 @@ def get_custom_css():
     /* Fondo general */
     body, .stApp {
         background-color: #2E4E4D;   /* fondo base gris-verdoso */
-        color: #B1A187;              /* texto principal */
+        color: #6E7D6A;              /* texto principal */
         font-family: 'Segoe UI', sans-serif;
     }
 
@@ -36,14 +36,13 @@ def get_custom_css():
         color: #491E31 !important;
     }
 
-
     /* ======== BOTÓN DE FORMULARIO PERSONALIZADO ======== */
     button[kind="secondaryFormSubmit"]:hover {
-    background-color: #D3D3D3 !important;  /* gris claro */
-    color: #491E31 !important;             /* texto oscuro para buen contraste */
-    font-weight: bold !important;
-    transition: background-color 0.3s ease !important;
-}
+        background-color: #D3D3D3 !important;  /* gris claro */
+        color: #491E31 !important;             /* texto oscuro para buen contraste */
+        font-weight: bold !important;
+        transition: background-color 0.3s ease !important;
+    }
 
     .stFormSubmitButton button.st-emotion-cache-ktz07o {
         background-color: #81454E !important;
