@@ -8,13 +8,13 @@ def get_custom_css():
     /* Fondo general */
     body, .stApp {
         background-color: #2E4E4D;   /* fondo base gris-verdoso */
-        color: #6E7D6A;              /* texto principal */
+        color: #B1A187;              /* texto principal */
         font-family: 'Segoe UI', sans-serif;
     }
 
     /* Títulos */
     h1, h2, h3 {
-        color: #AB6F61;
+        color: #B1A187;
     }
 
     /* ---------- FORMULARIO ---------- */
