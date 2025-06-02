@@ -45,7 +45,8 @@ def get_custom_css():
         transition: background-color 0.3s ease !important;
     }
 
-    .stFormSubmitButton button.st-emotion-cache-ktz07o {
+    button[kind="secondaryFormSubmit"]:focus,
+    button[kind="secondaryFormSubmit"]:active {
         background-color: #81454E !important;
         color: white !important;
     }
