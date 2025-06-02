@@ -18,7 +18,7 @@ def get_custom_css():
     }
 
     /* ---------- FORMULARIO ---------- */
-    .stForm {
+    div[data-testid="stForm"] {
         background-color: #6E7D6A;   /* panel del form */
         padding: 2rem;
         border-radius: 16px;
@@ -31,8 +31,8 @@ def get_custom_css():
         color: #F5F5F5 !important;
     }
 
-    div[data-testid="stSliderTickBarMax"],
-    div[data-testid="stSliderTickBarMin"] {
+    div[data-testid="stTickBarMax"],
+    div[data-testid="stTickBarMin"] {
         color: #491E31 !important;
     }
 
