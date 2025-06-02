@@ -36,6 +36,7 @@ def get_custom_css():
         color: #491E31 !important;
     }
 
+
     /* ======== BOTÓN DE FORMULARIO PERSONALIZADO ======== */
     button[kind="secondaryFormSubmit"]:hover {
         background-color: #D3D3D3 !important;  /* gris claro */
@@ -48,8 +49,6 @@ def get_custom_css():
         background-color: #81454E !important;
         color: white !important;
     }
-
-
 
     /* ---------- CUADROS DE RESULTADO ---------- */
     .survive-box {
