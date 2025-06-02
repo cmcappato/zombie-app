@@ -5,7 +5,8 @@ from styles import get_custom_css
 
 st.set_page_config(
     page_title="Supervivencia Zombie",
-    page_icon="assets\zombie.png"
+    page_icon="assets\zombie.png", 
+    layout="wide"
 )
 # Cargar modelo
 modelo = joblib.load("model/modelo_zombie.pkl")
