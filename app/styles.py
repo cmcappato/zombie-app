@@ -31,9 +31,8 @@ def get_custom_css():
         color: #F5F5F5 !important;
     }
 
-    div[data-testid="stTickBarMax"],
-    div[data-testid="stTickBarMin"] {
-        color: #491E31 !important;
+    .stNumberInput {
+        max-width: 150px;
     }
 
 
@@ -49,6 +48,7 @@ def get_custom_css():
         background-color: #81454E !important;
         color: white !important;
     }
+    
 
     /* ---------- CUADROS DE RESULTADO ---------- */
     .survive-box {

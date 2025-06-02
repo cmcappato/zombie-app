@@ -19,8 +19,8 @@ X_dummies = pd.get_dummies(X).reindex(columns=columnas_entrenamiento, fill_value
 st.title("🧟‍♀️ Clasificador de Supervivencia Zombie")
 
 with st.form("formulario_prediccion"):
-    edad = st.number_input("Edad", min_value=0, max_value=121, value=30, step=1, help="Edad en años")
-    genero = st.radio("Género", ['Femenino', 'Masculino'], index=0, help="Selecciona el género de la persona.")
+    edad = st.number_input("Edad", min_value=0, max_value=121, step=1)
+    genero = st.radio("Género", ['Femenino', 'Masculino'], index=0)
     zona_infectada = st.radio("Zona infectada", ['Zona infectada', 'Zona segura'], index=0, help="Indica si la persona está en una zona con presencia de zombies.")
     mordido = st.radio("¿Fue mordido?", ['No', 'Si', 'Desconocido'], index=0, help="Indica si la persona ha recibido una mordida de zombie.")
     unidad_refugio = st.radio("Unidad de refugio", ['Centro de contención A', 'Centro de contención B', 'Refugio improvisado', 'Unidad móvil de emergencia'], index=0, help="Selecciona el tipo de refugio o centro de contención donde se encuentra la persona.")
