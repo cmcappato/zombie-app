@@ -72,33 +72,30 @@ with st.form("formulario_prediccion"):
         prediccion = modelo.predict(entrada_dummies)[0]
         proba_sobrevive = modelo.predict_proba(entrada_dummies)[0][1]
 
-        # Mostrar resultado de forma más inmersiva
+        # Mostrar resultado 
         if proba_sobrevive >= 0.6:
             st.markdown(
                 f"""
-                <div style="background-color:#d0f0c0;padding:20px;border-radius:10px">
-                    <h2 style="color:#2E7D32">🟢 Supervivencia probable</h2>
-                    <p style="color:#1B5E20;font-size:16px">
-                        Este individuo muestra <strong>buenas probabilidades de sobrevivir</strong> al apocalipsis. 
-                        Preparación, refugio y estado mental adecuado aumentan las chances.
-                    </p>
-                    <p style="color:#1B5E20;font-size:14px"><strong>Probabilidad estimada:</strong> {proba_sobrevive:.2%}</p>
-                    <p style="color:#1B5E20;font-size:14px"><strong>Clasificación del modelo:</strong> {"Sobrevive" if prediccion == 1 else "No sobrevive"}</p>
-                </div>""", 
+                <div class="survive-box">
+                    <h2>🟢 ¡Supervivencia probable!</h2>
+                    <p>Este individuo muestra <strong>buenas probabilidades</strong> de sobrevivir al apocalipsis.</p>
+                    <p><strong>Probabilidad estimada:</strong> {proba_sobrevive:.2%}</p>
+                    <p><strong>Clasificación del modelo:</strong> {"Sobrevive" if prediccion == 1 else "No sobrevive"}</p>
+                </div>
+                """,
                 unsafe_allow_html=True
             )
         else:
             st.markdown(
-                 f"""
-                <div style="background-color:#FFBABA;padding:20px;border-radius:10px">
-                    <h2 style="color:#D8000C">🔴 Supervivencia poco probable</h2>
-                    <p style="color:#5C0002;font-size:16px">
-                        Este individuo tiene <strong>bajas probabilidades de sobrevivir</strong>. 
-                        Factores adversos como infección o refugio inadecuado aumentan el riesgo.
-                    </p>
-                    <p style="color:#5C0002;font-size:14px"><strong>Probabilidad estimada:</strong> {proba_sobrevive:.2%}</p>
-                    <p style="color:#5C0002;font-size:14px"><strong>Clasificación del modelo:</strong> {"Sobrevive" if prediccion == 1 else "No sobrevive"}</p>
-                </div>""", 
+                f"""
+                <div class="nosurvive-box">
+                    <h2>🔴 Supervivencia poco probable</h2>
+                    <p>Este individuo tiene <strong>bajas probabilidades</strong> de sobrevivir.</p>
+                    <p><strong>Probabilidad estimada:</strong> {proba_sobrevive:.2%}</p>
+                    <p><strong>Clasificación del modelo:</strong> {"Sobrevive" if prediccion == 1 else "No sobrevive"}</p>
+                </div>
+                """,
                 unsafe_allow_html=True
             )
+
 
