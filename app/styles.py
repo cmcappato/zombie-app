@@ -36,6 +36,7 @@ def get_custom_css():
         color: #491E31 !important;
     }
 
+
     /* ======== BOTÓN DE FORMULARIO PERSONALIZADO ======== */
     button[kind="secondaryFormSubmit"]:hover {
         background-color: #D3D3D3 !important;  /* gris claro */
@@ -44,7 +45,6 @@ def get_custom_css():
         transition: background-color 0.3s ease !important;
     }
 
-    button[kind="secondaryFormSubmit"]:focus,
     button[kind="secondaryFormSubmit"]:active {
         background-color: #81454E !important;
         color: white !important;
@@ -67,10 +67,7 @@ def get_custom_css():
     }
 
     /* Margen general */
-    .block-container { 
-        padding-left: 1rem;
-        padding-right: 1rem; 
-    }
+    .block-container { padding: 2rem 4rem; }
 
     </style>
     """
