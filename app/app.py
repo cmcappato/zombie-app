@@ -1,9 +1,13 @@
 import streamlit as st
 import pandas as pd
 import joblib
+from styles import get_custom_css
 
 # Cargar modelo
 modelo = joblib.load("model/modelo_zombie.pkl")
+
+# Archivo con estilos
+st.markdown(get_custom_css(), unsafe_allow_html=True)
 
 # Cargar datos para obtener columnas de referencia
 df = pd.read_csv("data/zombie_data_binary.csv", low_memory=False)
