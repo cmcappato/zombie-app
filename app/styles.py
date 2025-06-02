@@ -13,8 +13,8 @@ def get_custom_css():
     }
 
     /* Títulos */
-    h1, h2, h3 {
-        color: #AB6F61;
+    h1 {
+        color: #B1A187;
     }
 
     /* ---------- FORMULARIO ---------- */
